@@ -1,5 +1,4 @@
 window.onload=function(){
-	alert(history.length);
 	rightWindow();
 	bannerMovement();
 	content();
