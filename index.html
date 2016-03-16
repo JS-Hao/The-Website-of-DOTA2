@@ -3,13 +3,13 @@
 <head>
   	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
  	<title>This is the DotA!</title>
- 	<link rel="stylesheet" type="text/css" href="styles/reset.css">
-  	<link rel="stylesheet" type="text/css" href="styles/index.css">
+ 	<link rel="stylesheet" type="text/css" href="src/styles/reset.css">
+  	<link rel="stylesheet" type="text/css" href="src/styles/index.css">
 </head>
 <body>
- 	<div id="main">
+ 	<div class="main">
 		<!--导航-->
-	  	<div id="navigation">
+	  	<div class="navigation">
 	  		<div id="nav_1" class="nav">
 	          	<a href="#" class="nav_image1"></a>
 	          	<ul class="topul">
@@ -67,23 +67,29 @@
 	  	 	</div>
 	    </div>
 	    <!--banner-->
-	    <div id="banner">
-	    	<div id="banner1"><img src="images/shanghai2.jpg"><a href="#"></a></div>
-	        <div id="banner2"><img src="images/yongshi1.jpg"><a href="#"></a></div>
-	        <div id="banner3"><img src="images/menpiao.jpg"><a href="#"></a></div>
-	        <div id="banner4"><img src="images/2015.jpg"><a href="#"></a></div>
-	        <div id="banner5"><img src="images/zidingyi1.jpg"><a href="#"></a></div>
+	    <div class="banner-frame">
+		    <div class="banner-box">
+		    	<div class="banner banner1"><img src="src/images/banner/shanghai2.jpg"><a href="#"></a></div>
+		        <div class="banner banner2"><img src="src/images/banner/yongshi1.jpg"><a href="#"></a></div>
+		        <div class="banner banner3"><img src="src/images/banner/menpiao.jpg"><a href="#"></a></div>
+		        <div class="banner banner4"><img src="src/images/banner/2015.jpg"><a href="#"></a></div>
+		        <div class="banner banner5"><img src="src/images/banner/zidingyi1.jpg"><a href="#"></a></div>
+		    </div>
+		    <div id="banner-button">
+			    	<a class="banner-button"></a>
+			        <a class="banner-button"></a>
+			        <a class="banner-button"></a>
+			        <a class="banner-button"></a>
+			        <a class="banner-button"></a>
+		    </div>
 	    </div>
-	    <div id="banner_button"><a class="banner_button"></a>
-	        <a class="banner_button"></a>
-	        <a class="banner_button"></a>
-	        <a class="banner_button"></a>
-	        <a class="banner_button"></a>
-	    </div>
-	    <img id="guodu" src="images/guodu.png">
-	    <div id="r-wid">
-	        <div id="r-wid-r"><span id="r-wid-s">收起</span><div id="r-wid-d"></div></div>
-	        <div class="Rwid" id="r-wid-top">
+	    <img class="transition" src="src/images/transition/guodu.png">
+	    <div class="r-wid">
+	        <div class="r-wid-r">
+	        	<span class="r-wid-s">收起</span>
+	        	<div class="r-wid-d"></div>
+	        </div>
+	        <div class="Rwid r-wid-top">
 	        	<a class="Rwid-kefu" href="">
 	        		<i class="Rwid-pto"></i>
 	        		<span>在线客服</span>
@@ -91,7 +97,7 @@
 	        	<p>投诉邮箱</p>
 	        	<span>tsdota2@cs.wanmei.com</span>
 	        </div>
-	        <div class="Rwid" id="r-wid-mid">
+	        <div class="Rwid r-wid-mid">
 	            <a class="Rwid-kefu" href="">
 	            	<i class="Rwid-pto"></i><span>新浪微博</span>
 	            </a>
@@ -100,7 +106,7 @@
 	                <div class="pc-weixin"></div>
 	            </div>
 	        </div>
-	        <a class="Rwid" id="r-wid-btm" href=""></a>
+	        <a class="Rwid r-wid-btm" href=""></a>
 	    </div>
 	  	<!--内容-->
 	 	<div class="content">
@@ -115,32 +121,32 @@
 	      		<div class="l-cont l-act-cont" id="l-act-cont">
 		        	<ul>
 					  	<li>
-					      	<a href=""><img src="images/0cc1acbc357fbf1d6532b43c3df7d1a61453897795.jpg"></a>
+					      	<a href=""><img src="src/images/content/0cc1acbc357fbf1d6532b43c3df7d1a61453897795.jpg"></a>
 					      	<div></div>
 					      	<p><a href="">1月30日增售双休5层看台票</a></p>
 					  	</li> 
 		          		<li>
-		              		<a href=""><img src="images/e5b7d88a66255d810edca9e598b2405e1453955548.jpg"></a>
+		              		<a href=""><img src="src/images/content/e5b7d88a66255d810edca9e598b2405e1453955548.jpg"></a>
 		              		<div></div>
 		              		<p><a href="">2016冬季勇士令状内含互动指南</a></p>
 		          		</li> 
 		          		<li>
-		              		<a href=""><img src="images/aa46cedd6266c8171cb83a5490550c8a1452134009.jpg"></a>
+		              		<a href=""><img src="src/images/content/aa46cedd6266c8171cb83a5490550c8a1452134009.jpg"></a>
 		              		<div></div>
 		              		<p><a href="">回顾上海特锦赛中国区预选赛</a></p>
 		          		</li> 
 		          		<li>
-		              		<a href=""><img src="images/a438d0bae4348ae6e29e9ad88d0a11871451548171.jpg"></a>
+		              		<a href=""><img src="src/images/content/a438d0bae4348ae6e29e9ad88d0a11871451548171.jpg"></a>
 		              		<div></div>
 		              		<p><a href="">上海特级锦标赛受邀战队公布</a></p>
 		          		</li> 
 		          		<li>
-		              		<a href=""><img src="images/6c3b7362243b520791bc58bf719be5551454559357.jpg"></a>
+		              		<a href=""><img src="src/images/content/6c3b7362243b520791bc58bf719be5551454559357.jpg"></a>
 		              		<div></div>
 		              		<p><a href="">上海特级锦标赛 3月2日-3月6日</a></p>
 		          		</li> 
 		          		<li>
-		              		<a href=""><img src="images/a10803dbf06cf227d7c9336d76afc3301454402882.jpg"></a>
+		              		<a href=""><img src="src/images/content/a10803dbf06cf227d7c9336d76afc3301454402882.jpg"></a>
 		              		<div></div>
 		              		<p><a href="">回顾我们的2015</a></p>
 		          		</li> 
@@ -150,17 +156,17 @@
 	      		<div class="l-cont l-his-cont" id="l-his-cont">
 				  	<ul>
 				      	<li>
-				          	<a href=""><img src="images/c743119fedb3cd654f3a22219d2c98cc1450349061.jpg"></a>
+				          	<a href=""><img src="src/images/content/c743119fedb3cd654f3a22219d2c98cc1450349061.jpg"></a>
 				          	<div></div>
 				          	<p><a href="">6.86版本更新日志</a></p>
 				      	</li>
 				      	<li>
-				          	<a href=""><img src="images/1aaa71a960f176b27cac3da2afb1d1dd1450252236.jpg"></a>
+				          	<a href=""><img src="src/images/content/1aaa71a960f176b27cac3da2afb1d1dd1450252236.jpg"></a>
 				          	<div></div>
 				          	<p><a href="">6.85版本更新日志</a></p>
 				      	</li>
 				      	<li>
-				          	<a href=""><img src="images/10251443175887427.jpg"></a>
+				          	<a href=""><img src="src/images/content/10251443175887427.jpg"></a>
 				          	<div></div>
 				          	<p><a href="">6.84版本更新日志</a></p>
 				      	</li>
@@ -182,7 +188,7 @@
 		              	</div>
 		              	<dl >
 		                  	<dt>
-		                      	<a href=""><img src="images/7c8ee1eaa83d6cca00973bae073326621456508352.jpg" alt="DOTA2上海特锦赛第二日 B组[A]如履平川"></a>
+		                      	<a href=""><img src="src/images/content/7c8ee1eaa83d6cca00973bae073326621456508352.jpg" alt="DOTA2上海特锦赛第二日 B组[A]如履平川"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">DOTA2上海特锦赛第二日 B组[A]如履平川</a></h2>
@@ -192,7 +198,7 @@
 		              	</dl>
 		              	<dl >
 		                  	<dt>
-		                      	<a href=""><img src="images/6409d30842f99fa37d35bd045259d7c41456428112.jpg" alt="DOTA2上海特锦赛首日 A组MVP.Phx惊艳夺魁"></a>
+		                      	<a href=""><img src="src/images/content/6409d30842f99fa37d35bd045259d7c41456428112.jpg" alt="DOTA2上海特锦赛首日 A组MVP.Phx惊艳夺魁"></a>
 		                  	</dt>
 		                	<dd>
 		                    	<h2><a href="">DOTA2上海特锦赛首日 A组MVP.Phx惊艳夺魁</a></h2>
@@ -202,7 +208,7 @@
 		              	</dl>
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/7cd3c25562c948f4bdab823216163ac41456297729.jpg" alt="DOTA2上海特级锦标赛小组赛明日开战"></a>
+		                      	<a href=""><img src="src/images/content/7cd3c25562c948f4bdab823216163ac41456297729.jpg" alt="DOTA2上海特级锦标赛小组赛明日开战"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">DOTA2上海特级锦标赛小组赛明日开战</a></h2>
@@ -212,7 +218,7 @@
 		              	</dl>
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/e1630a3e795415cf0a8041916a1ee0a01456288404.jpg" alt="DOTA2上海特锦赛 比赛未至战斗却已打响"></a>
+		                      	<a href=""><img src="src/images/content/e1630a3e795415cf0a8041916a1ee0a01456288404.jpg" alt="DOTA2上海特锦赛 比赛未至战斗却已打响"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">DOTA2上海特锦赛 比赛未至战斗却已打响</a></h2>
@@ -222,7 +228,7 @@
 		              	</dl>	
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/2790005d184ec25a737a7f54219a27e31456194645.jpg" alt="DOTA2上海特锦赛 元宵佳节战队“到家”"></a>
+		                      	<a href=""><img src="src/images/content/2790005d184ec25a737a7f54219a27e31456194645.jpg" alt="DOTA2上海特锦赛 元宵佳节战队“到家”"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">DOTA2上海特锦赛 元宵佳节战队“到家”</a></h2>
@@ -235,7 +241,7 @@
 	          		<div class="news-cont">
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/0cb7cb2ef1fd7b657b5b4ed6a78365111456558368.png" alt="关于DOTA2上海特级锦标赛英文转播团队更换"></a>
+		                      	<a href=""><img src="src/images/content/0cb7cb2ef1fd7b657b5b4ed6a78365111456558368.png" alt="关于DOTA2上海特级锦标赛英文转播团队更换"></a>
 		                  	</dt>
 		                	<dd>
 		                    	<h2><a href="">关于DOTA2上海特级锦标赛英文转播团队更换</a></h2>
@@ -245,7 +251,7 @@
 		              	</dl>
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/0cb7cb2ef1fd7b657b5b4ed6a78365111456558368.png" alt="DOTA2上海特级锦标赛小组赛明日开战"></a>
+		                      	<a href=""><img src="src/images/content/0cb7cb2ef1fd7b657b5b4ed6a78365111456558368.png" alt="DOTA2上海特级锦标赛小组赛明日开战"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">DOTA2上海特级锦标赛小组赛明日开战</a></h2>
@@ -255,7 +261,7 @@
 		              	</dl>
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/64ca5fcd0780dd56d7390d031c9351e11455891761.jpg" alt="关于部分早期录像无法下载的相关公告"></a>
+		                      	<a href=""><img src="src/images/content/64ca5fcd0780dd56d7390d031c9351e11455891761.jpg" alt="关于部分早期录像无法下载的相关公告"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">关于部分早期录像无法下载的相关公告</a></h2>
@@ -265,7 +271,7 @@
 		              	</dl>
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/d08a6a4717b5e640b9d8b75ba1304f3b1455818862.jpg" alt="冬季珍藏IV和上海特级锦标赛互动指南"></a>
+		                      	<a href=""><img src="src/images/content/d08a6a4717b5e640b9d8b75ba1304f3b1455818862.jpg" alt="冬季珍藏IV和上海特级锦标赛互动指南"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">冬季珍藏IV和上海特级锦标赛互动指南</a></h2>
@@ -275,7 +281,7 @@
 		              	</dl>
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/dcae27f91566e5636ba4155749d13aad1454724172.jpg" alt="2016冬季勇士令状加入春节特有路线—芳华之路"></a>
+		                      	<a href=""><img src="src/images/content/dcae27f91566e5636ba4155749d13aad1454724172.jpg" alt="2016冬季勇士令状加入春节特有路线—芳华之路"></a>
 		                  	</dt>
 		                  	<dd>
 		                      <h2><a href="">2016冬季勇士令状加入春节特有路线—芳华之路</a></h2>
@@ -288,7 +294,7 @@
 	          		<div class="news-cont">
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/7c8ee1eaa83d6cca00973bae073326621456508352.jpg" alt="DOTA2上海特锦赛第二日 B组[A]如履平川"></a>
+		                      	<a href=""><img src="src/images/content/7c8ee1eaa83d6cca00973bae073326621456508352.jpg" alt="DOTA2上海特锦赛第二日 B组[A]如履平川"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">DOTA2上海特锦赛第二日 B组[A]如履平川</a></h2>
@@ -298,7 +304,7 @@
 		              	</dl>
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/6409d30842f99fa37d35bd045259d7c41456428112.jpg" alt="DOTA2上海特锦赛首日 A组MVP.Phx惊艳夺魁"></a>
+		                      	<a href=""><img src="src/images/content/6409d30842f99fa37d35bd045259d7c41456428112.jpg" alt="DOTA2上海特锦赛首日 A组MVP.Phx惊艳夺魁"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">DOTA2上海特锦赛首日 A组MVP.Phx惊艳夺魁</a></h2>
@@ -308,7 +314,7 @@
 		              	</dl>
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/e1630a3e795415cf0a8041916a1ee0a01456288404.jpg" alt="DOTA2上海特锦赛 比赛未至战斗却已打响"></a>
+		                      	<a href=""><img src="src/images/content/e1630a3e795415cf0a8041916a1ee0a01456288404.jpg" alt="DOTA2上海特锦赛 比赛未至战斗却已打响"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">DOTA2上海特锦赛 比赛未至战斗却已打响</a></h2>
@@ -318,7 +324,7 @@
 		              	</dl>
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/2790005d184ec25a737a7f54219a27e31456194645.jpg" alt="DOTA2上海特锦赛 元宵佳节战队“到家”"></a>
+		                      	<a href=""><img src="src/images/content/2790005d184ec25a737a7f54219a27e31456194645.jpg" alt="DOTA2上海特锦赛 元宵佳节战队“到家”"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">DOTA2上海特锦赛 元宵佳节战队“到家”</a></h2>
@@ -328,7 +334,7 @@
 		              	</dl>
 		              	<dl>
 		                  	<dt>
-		                      	<a href=""><img src="images/42f210f5bd1df8064926823afa4281fc1456041450.jpg" alt="上海特级锦标赛 决赛日音乐会曲目公布"></a>
+		                      	<a href=""><img src="src/images/content/42f210f5bd1df8064926823afa4281fc1456041450.jpg" alt="上海特级锦标赛 决赛日音乐会曲目公布"></a>
 		                  	</dt>
 		                  	<dd>
 		                      	<h2><a href="">上海特级锦标赛 决赛日音乐会曲目公布</a></h2>
@@ -372,7 +378,7 @@
 	          		<div class="news-cont">
 			            <dl>
 			                <dt>
-			                    <a href=""><img src="images/51c66c3a2b5d0030fa203370108641e31454055091.jpg" alt="2016冬季勇士令状全攻略"></a>
+			                    <a href=""><img src="src/images/content/51c66c3a2b5d0030fa203370108641e31454055091.jpg" alt="2016冬季勇士令状全攻略"></a>
 			                </dt>
 			                <dd>
 			                    <h2><a href="">2016冬季勇士令状全攻略</a></h2>
@@ -382,7 +388,7 @@
 			            </dl>
 			            <dl>
 			                <dt>
-			                    <a href=""><img src="images/afe259da3cc2c96b5d2d2049db33e8c31452583959.jpg" alt="【17173推荐】RPG地图荒神罪攻略介绍专题"></a>
+			                    <a href=""><img src="src/images/content/afe259da3cc2c96b5d2d2049db33e8c31452583959.jpg" alt="【17173推荐】RPG地图荒神罪攻略介绍专题"></a>
 			                </dt>
 			                <dd>
 			                    <h2><a href="">【17173推荐】RPG地图荒神罪攻略介绍专题</a></h2>
@@ -392,7 +398,7 @@
 			            </dl>
 			            <dl>
 			                <dt>
-			                    <a href=""><img src="images/18b37b469da4448d8c486783c30b736e1452144810.jpg" alt="【游久推荐】DOTA2 6.86大型眼位攻略（四）推进眼"></a>
+			                    <a href=""><img src="src/images/content/18b37b469da4448d8c486783c30b736e1452144810.jpg" alt="【游久推荐】DOTA2 6.86大型眼位攻略（四）推进眼"></a>
 			                </dt>
 			                <dd>
 			                    <h2><a href="">【游久推荐】DOTA2 6.86大型眼位攻略（四）推进眼</a></h2>
@@ -402,7 +408,7 @@
 			            </dl>
 			            <dl>
 			                <dt>
-			                    <a href=""><img src="images/f7a60de95e90b6ad7d8ad7ff8e3b0a201451961564.jpg" alt="【游久推荐】6.86大型眼位攻略（三）野区眼"></a>
+			                    <a href=""><img src="src/images/content/f7a60de95e90b6ad7d8ad7ff8e3b0a201451961564.jpg" alt="【游久推荐】6.86大型眼位攻略（三）野区眼"></a>
 			                </dt>
 			                <dd>
 			                    <h2><a href="">【游久推荐】6.86大型眼位攻略（三）野区眼</a></h2>
@@ -412,7 +418,7 @@
 			            </dl>
 			            <dl>
 			                <dt>
-			                    <a href=""><img src="images/f42f8acc81715e7d39c4aaff3c6533581451881102.jpg" alt="【游久推荐】6.86大型眼位攻略（二）攻防眼"></a>
+			                    <a href=""><img src="src/images/content/f42f8acc81715e7d39c4aaff3c6533581451881102.jpg" alt="【游久推荐】6.86大型眼位攻略（二）攻防眼"></a>
 			                </dt>
 			                <dd>
 			                    <h2><a href="">【游久推荐】6.86大型眼位攻略（二）攻防眼</a></h2>
@@ -426,63 +432,63 @@
 	    <!--right-->
 	    	<div class="right clearfix">
 	       		<div class="imgbox">
-	          		<a href=""><img class="right_top" src="images/f36d447c7762acae1f23e2a68d581a451450441413.jpg"></a>
-	          		<a href=""><img class="right_content" src="images/75fed5b69b2fdbec0ad41b367912acc21450441518.jpg"></a>
-	          		<a href=""><img class="right_content" src="images/10251446088656864.jpg"></a>
-	          		<a href=""><img class="right_content" src="images/10251448620401549.jpg"></a>
-	          		<a href=""><img class="right_content" src="images/418c9cfc4b14a773e6caf64f8776226e1452596518.jpg"></a>
-	          		<a href=""><img class="right_content" src="images/10251445416547741.jpg"></a>
+	          		<a href=""><img class="right_top" src="src/images/content/f36d447c7762acae1f23e2a68d581a451450441413.jpg"></a>
+	          		<a href=""><img class="right_content" src="src/images/content/75fed5b69b2fdbec0ad41b367912acc21450441518.jpg"></a>
+	          		<a href=""><img class="right_content" src="src/images/content/10251446088656864.jpg"></a>
+	          		<a href=""><img class="right_content" src="src/images/content/10251448620401549.jpg"></a>
+	          		<a href=""><img class="right_content" src="src/images/content/418c9cfc4b14a773e6caf64f8776226e1452596518.jpg"></a>
+	          		<a href=""><img class="right_content" src="src/images/content/10251445416547741.jpg"></a>
 	       		</div>
 	       		<!--历史专题-->
 	       		<div class="r-history"><a href="">查看更多 >></a></div>
 	       		<div class="r-history-content">
 	       			<div class="r-history-frame">
-	       				<ul>
+	       				<ul id="movingFrame">
 	       					<li>
-	       						<a href=""><img src="images/rightArea/10251437624181926.jpg"></a>
+	       						<a href=""><img src="src/images/content/10251437624181926.jpg"></a>
 	       						<p>2015国际邀请赛</p>
 	       					</li>
 	       					<li>
-	       						<a href=""><img src="images/rightArea/10251447402198802.jpg"></a>
+	       						<a href=""><img src="src/images/content/10251447402198802.jpg"></a>
 	       						<p>法兰克福特锦赛主赛事</p>
 	       					</li>
 	       					<li>
-	       						<a href=""><img src="images/rightArea/10251445399892347.jpg"></a>
+	       						<a href=""><img src="src/images/content/10251445399892347.jpg"></a>
 	       						<p>17173RPG专区</p>
 	       					</li>
 	       					<li>
-	       						<a href=""><img src="images/rightArea/10251444884966278.jpg"></a>
+	       						<a href=""><img src="src/images/content/10251444884966278.jpg"></a>
 	       						<p>法兰克福特锦赛中国区预选赛</p>
 	       					</li>
 	       					<li>
-	       						<a href=""><img src="images/rightArea/10251442817518513.jpg"></a>
+	       						<a href=""><img src="src/images/content/10251442817518513.jpg"></a>
 	       						<p>DOTA2重生</p>
 	       					</li>
 	       					<li>
-	       						<a href=""><img src="images/rightArea/10251445310385692.jpg"></a>
+	       						<a href=""><img src="src/images/content/10251445310385692.jpg"></a>
 	       						<p>DOTA2重生优化进度查看</p>
 	       					</li>
 	       					<li>
-	       						<a href=""><img src="images/rightArea/10251439536621063.jpg"></a>
+	       						<a href=""><img src="src/images/content/10251439536621063.jpg"></a>
 	       						<p>国际邀请赛大数据</p>
 	       					</li>
 	       					<li>
-	       						<a href=""><img src="images/rightArea/10251432279041666.jpg"></a>
+	       						<a href=""><img src="src/images/content/10251432279041666.jpg"></a>
 	       						<p>在线预热活动</p>
 	       					</li>
 	       					<li>
-	       						<a href=""><img src="images/rightArea/10251430482960346.jpg"></a>
+	       						<a href=""><img src="src/images/content/10251430482960346.jpg"></a>
 	       						<p>2015国际邀请赛互动指南</p>
 	       					</li>
 	       				</ul>
 	       			</div>
-	       			<img class="r-history-l" src="images/rightArea/l2.png">
-	       			<img class="r-history-r" src="images/rightArea/r2.png">
+	       			<img class="r-history-l" id="r-history-l" src="src/images/content/l2.png">
+	       			<img class="r-history-r" id="r-history-r" src="src/images/content/r2.png">
 	       		</div>
 	    	</div>
 	    </div>
     </div>
-  	<script type="text/javascript" src="js/hao.js"></script>
-  	<script type="text/javascript" src="js/home.js"></script>
+  	<script type="text/javascript" src="src/js/hao.js"></script>
+  	<script type="text/javascript" src="src/js/home.js"></script>
  </body>
  </html>

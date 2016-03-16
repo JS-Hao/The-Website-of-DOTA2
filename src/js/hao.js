@@ -60,7 +60,7 @@ function getClassName(element,Name){
 
 //获取元素right
 function offsetRight(element,elementWidth){
-	var elem=document.getElementById(element);
+	var elem=document.querySelector("." + element);
 	var oright=(document.documentElement.clientWidth-elem.offsetLeft)-elementWidth;
 	return oright;
 }
