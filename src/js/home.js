@@ -1,23 +1,19 @@
-window.onload=function(){
-	
-	content();
-	contAct();
-	newCenter();
-};
 var index = (function(){
 	//banner
 	function bannerMovement(){
+		var bannerFrame = document.querySelector(".banner-frame");
+		var bannerBox = bannerFrame.querySelector(".banner-box");
+		var btns = bannerFrame.querySelectorAll(".banner-button");
 		var time = null;
 		var z = 0;
 		var leftX = 0;
-		var bannerBox = document.querySelector(".banner-box");
-		var btns = document.querySelectorAll(".banner-button");
+
 		bannerBox.style.left = "0%";
 		btns[0].style.backgroundPosition = "0 -29px";
 
 		//按钮banner切换
 		for(var i = 0, len = btns.length; i < len; i++){
-			btns[i].onclick=function(){
+			btns[i].onclick = function(){
 				for(var j = 0; j < len; j++){
 					if(btns[j] == this){
 						z = j;
@@ -37,7 +33,7 @@ var index = (function(){
 		var time = setInterval(gundong,9000);
 		function gundong(){
 			if(leftX > -400){
-				leftX = leftX-100;
+				leftX = leftX - 100;
 				startMove(bannerBox,{left:leftX},20,1);
 			}else{
 				leftX = 0;
@@ -108,6 +104,7 @@ var index = (function(){
 				this.style.backgroundColor = "#525e63";
 				rp = this.querySelector(".Rwid-pto");
 				rp.style.backgroundPosition = getCSS(rp,"backgroundPosition").split(" ")[0] + " -52px";
+
 			}
 			kefu[i].onmouseout=function(){
 				this.style.backgroundColor = "#2c3437";
@@ -117,143 +114,162 @@ var index = (function(){
 		}	
 	}
 
+	//content
+	function content(){
+		var btn = document.querySelector(".l-btn");
+		var url = getCSS(btn,"background");
+		var btns = btn.getElementsByTagName("a");
+
+		for(var i = 0, len = btns.length; i < len; i++){
+			btns[i].index = i;
+			btns[i].onmouseover=function(){
+				this.style.background = url;
+				this.style.backgroundPosition = -this.index * 226 + "px" + " -90px";
+			}
+			btns[i].onmouseout=function(){
+				this.style.backgroundPosition = -this.index * 226 + "px" + " 0";
+			}
+		}
+	}
+
+	//活动中心
+	function contAct(){
+		var act = document.querySelector(".l-act-cont");
+		var divs = act.getElementsByTagName("div");
+		var imgs = act.getElementsByTagName("img");
+		var lis = act.getElementsByTagName("li");
+
+		for(var i=0, len = lis.length; i < len; i++){
+			lis[i].index = i;
+			lis[i].onmouseover=function(){
+				divs[this.index].style.display = "block";
+				imgs[this.index].style.border = "3px #9e3427 solid";
+				imgs[this.index].style.width = "200px";
+				imgs[this.index].style.height = "126px";
+			}
+			lis[i].onmouseout=function(){
+				for(var j = 0; j < len; j++){
+					divs[this.index].style.display = "none";
+					imgs[this.index].style.border = "none";
+					imgs[this.index].style.width = "206px";
+					imgs[this.index].style.height = "132px";
+				}
+			}
+		}
+	}
+
+	//新闻中心
+	function newsCenter(){
+		var navs = document.querySelector(".news-nav").getElementsByTagName("li");
+		var news = document.querySelector(".l-news-cont");
+		var conts = news.querySelectorAll(".news-cont");
+
+		navs[0].style.backgroundPosition = "center bottom";
+		conts[0].style.display = "block";
+		for(var i=0, len = navs.length; i < len; i++){
+			navs[i].index = i;
+			navs[i].onmouseover = function(){
+				for(var j = 0; j < len; j++){
+					navs[j].style.backgroundPosition = "center top";
+					conts[j].style.display = "none";
+				}
+				this.style.backgroundPosition = "center bottom";
+				conts[this.index].style.display = "block";
+			}
+		}
+	}
+
+	//历史专题
+	function history(){	
+		var goleft = document.querySelector(".r-history-l");
+		var goright = document.querySelector(".r-history-r");
+		var movingFrame = document.getElementById("movingFrame");
+		var newfirst = document.createElement("li");
+		var newlast = document.createElement("li");
+		var time = null;
+		var start = 1;
+
+		if(movingFrame.firstElementChild && movingFrame.lastElementChild){
+			newfirst.innerHTML = movingFrame.lastElementChild.innerHTML;
+			newlast.innerHTML = movingFrame.firstElementChild.innerHTML;
+			movingFrame.appendChild(newlast);
+			movingFrame.insertBefore(newfirst,movingFrame.firstElementChild);
+		} else {
+			//兼容IE8
+			del_ff(movingFrame);
+			newfirst.innerHTML = movingFrame.lastChild.innerHTML;
+			newlast.innerHTML = movingFrame.firstChild.innerHTML;
+			movingFrame.appendChild(newlast);
+			movingFrame.insertBefore(newfirst,movingFrame.firstChild);
+		}
+
+		//向左、向右移动函数
+		function move(num){
+			uleft = movingFrame.offsetLeft + num;
+			startMove(movingFrame,{left:uleft},3,0,function(){
+				start = 1;
+			});
+		}
+		function turnleft(){
+			var uleft;
+			if(start == 1){
+				start = 0;
+				if(movingFrame.offsetLeft >= -143){
+					movingFrame.style.left = "-2141px";
+				}
+				move(222);
+			}	
+		};
+		function turnright(){
+			var uleft;
+			if(start == 1){
+				start = 0;
+				if(movingFrame.offsetLeft <= -1919){
+					movingFrame.style.left = "79px";
+				}
+				move(-222);
+			}
+		};
+
+		//自动
+		var automatic = function(){
+			time = setInterval(function(){
+				turnright();
+			},10000);
+		}
+		
+		//按键设置
+		goleft.onclick = function(){
+			clearInterval(time);
+			turnleft();
+			automatic();
+		}
+		goright.onclick = function(){
+			clearInterval(time);
+			turnright();
+			automatic();
+		}
+
+		automatic();
+	}
+
 	return {
 		bannerMovement : bannerMovement,
-		rightWindow : rightWindow
+		rightWindow    : rightWindow,
+		content        : content,
+		contAct        : contAct,
+		newsCenter     : newsCenter,
+		history        : history
 	}
 })();
 index.bannerMovement();
 index.rightWindow();
+index.content();
+index.contAct();
+index.newsCenter();
+index.history();
 
 
 
 
-//content
 
-function content(){
-	var btn=document.getElementById("l-btn-a");
-	var url=getCSS(btn,"background");
-	var btns=btn.getElementsByTagName("a");
-	for(var i=0; i<btns.length; i++){
-		btns[i].index=i;
-		btns[i].onmouseover=function(){
-			this.style.background=url;
-			this.style.backgroundPosition=-this.index*226+"px"+" -90px";
-		}
-		btns[i].onmouseout=function(){
-			this.style.backgroundPosition=-this.index*226+"px"+" 0";
-		}
-	}
-}
-
-function contAct(){
-	var act=document.getElementById("l-act-cont");
-	var divs=act.getElementsByTagName("div");
-	var lis=act.getElementsByTagName("li");
-	for(var i=0; i<lis.length; i++){
-		lis[i].index=i;
-		lis[i].onmouseover=function(){
-			divs[this.index].style.display="block";
-		}
-		lis[i].onmouseout=function(){
-			for(var j=0; j<divs.length; j++){
-				divs[this.index].style.display="none";
-			}
-		}
-	}
-
-}
-//新闻中心
-
-function newCenter(){
-	var navs=document.getElementById("news-nav").getElementsByTagName("li");
-	var news=document.getElementById("l-news");
-	var conts=getClassName(news,"news-cont");
-	navs[0].style.backgroundPosition="center bottom";
-	conts[0].style.display="block";
-	for(var i=0; i<navs.length; i++){
-		navs[i].index=i;
-		navs[i].onmouseover=function(){
-			for(var j=0; j<navs.length; j++){
-				navs[j].style.backgroundPosition="center top";
-				conts[j].style.display="none";
-			}
-			this.style.backgroundPosition="center bottom";
-			conts[this.index].style.display="block";
-		}
-	}
-}
-
-//历史专题
-history();
-function history(){
-	//向左、向右移动函数
-	function move(num){
-		uleft=movingFrame.offsetLeft+num;
-		startMove(movingFrame,{left:uleft},3,0,function(){
-			start=1;
-		});
-	}
-	function turnleft(){
-		var uleft;
-		if(start==1){
-			start=0;
-			if(movingFrame.offsetLeft>=-143){
-				movingFrame.style.left="-2141px";
-			}
-			move(222);
-		}	
-	};
-	function turnright(){
-		var uleft;
-		if(start==1){
-			start=0;
-			if(movingFrame.offsetLeft<=-1919){
-				movingFrame.style.left="79px";
-			}
-			move(-222);
-		}
-	};
-	//自动
-	var time=null;
-	var automatic=function(){
-		time=setInterval(function(){
-			turnright();
-		},10000);
-	}
-	//获取节点
-	var goleft=document.getElementById("r-history-l");
-	var goright=document.getElementById("r-history-r");
-	var movingFrame=document.getElementById("movingFrame");
-	del_ff(movingFrame);
-	//新建节点
-	var newfirst=document.createElement("li");
-	var newlast=document.createElement("li");
-	newfirst.innerHTML=movingFrame.lastChild.innerHTML;
-	newlast.innerHTML=movingFrame.firstChild.innerHTML;
-	//插入节点
-	movingFrame.appendChild(newlast);
-	movingFrame.insertBefore(newfirst,movingFrame.firstChild);
-	//按键设置
-	var start=1;
-	goleft.onclick=function(){
-		clearInterval(time);
-		turnleft();
-		automatic();
-
-	}
-	goright.onclick=function(){
-		clearInterval(time);
-		turnright();
-		automatic();
-	}
-	automatic();
-}
-function del_ff(elem){ 
-	var elem_child = elem.childNodes; 
-	for(var i=0; i<elem_child.length;i++){ 
-		if(elem_child[i].nodeName == "#text" && !/\s/.test(elem_child.nodeValue)) {
-				elem.removeChild(elem_child[i]);
-		} 
-	} 
-}

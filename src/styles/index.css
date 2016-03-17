@@ -3,7 +3,7 @@
 .main{
 	position: relative;
 	width: 100%;
-	height: 2620px;
+	height: 2616px;
 	min-width: 1100px;
 
 	overflow: hidden;
@@ -151,6 +151,7 @@
 
 	z-index: 12;
 }
+
 /*transition*/
 .transition {
 	position: absolute;
@@ -161,6 +162,12 @@
 /*right-window*/
 .r-wid-r div, .Rwid a i {
 	background: url(../images/rightwindow/icon-float-bar.png);
+}
+.Rwid #Rwid-pto1 {
+	background-position: -8px -8px;
+}
+.Rwid #Rwid-pto2 {
+	background-position: -42px -8px;
 }
 .r-wid {
 	position: fixed;
@@ -234,6 +241,7 @@
 	width: 110px;
 	margin: 0 auto 20px;
 }
+
 /*r-wid-top*/
 .r-wid-top {
 	height: 95px;
@@ -245,6 +253,7 @@
 	display: block;
 	margin-top:2px;
 }
+
 /*r-wid-mid*/
 .r-wid-mid a i {
 	background-position: -42px -8px;
@@ -254,6 +263,7 @@
 	height: 24px;
 	margin: 20px 0px 5px;
 }
+
 /*r-wid-btm*/
 .r-wid-btm {
 	display: block;
@@ -265,13 +275,15 @@
 /*内容*/
 .content {
 	position: absolute;
+	margin-left: -550px;
 	width: 1100px;
 	left:50%;
-	margin-left: -550px;
-	z-index: 10;
 	top: 752px;
+	
+	z-index: 10;
 	overflow: hidden;
 }
+
 /*左侧*/
 .left {
 	float: left;
@@ -295,9 +307,10 @@
 	width: 225px;
 }
 .l-act {
-	background:url(../images/content/t_act2.png) 0 0 no-repeat;
 	width: 667px;
     height: 75px;
+
+	background:url(../images/content/t_act2.png) 0 0 no-repeat;
     text-align: right;
     overflow: hidden;
 }
@@ -319,11 +332,12 @@
     overflow: hidden;
 }
 .l-cont ul li {
+	position: relative;
 	margin: 10px 8px 0;
-    float: left;
-    position: relative;
-    width: 206px;
+	width: 206px;
     height: 170px;
+    float: left;
+
     overflow: hidden;
 }
 .l-cont ul li a img {
@@ -338,18 +352,14 @@
 }
 .l-cont ul li p a {
 	display: block;
+	height: 38px;
+
 	color: #eee;
 	font-size: 14px;
-	height: 38px;
 	line-height: 38px;
 }
-.l-cont ul li p a:hover, {
+.l-cont ul li p a:hover {
 	color: #ed3f02;
-}
-.l-act-cont ul li a img:hover {
-	border:3px #9e3427 solid;
-	width: 200px;
-	height: 126px;
 }
 .l-act-cont ul li div {
 	display: none;
@@ -358,32 +368,39 @@
 	height: 28px;
 	bottom: 41px;
 	left: 3px;
+
 	background:url(../images/content/hd_state.png) 0 0 no-repeat #111111;
 	filter: alpha(opacity:80);
 	opacity: 0.8;
 }
 .l-history {
-	background:url(../images/content/t_ver.png) 0 0 no-repeat;
 	width: 667px;
     height: 67px;
+
+    background:url(../images/content/t_ver.png) 0 0 no-repeat;
     text-align: right;
     overflow: hidden;
 }
 .l-his-cont {
 	height: 198px;
 }
+#l-his-cont ul li p a:hover{
+	text-decoration: none;
+}
 .l-news {
 	width: 667px;
     height: 65px;
+
     background: url(../images/content/t_news.png) 0 0 no-repeat;
     overflow: hidden;
 }
 .l-news-cont {
+	width: 675px;
 	height: 952px;
 	padding-top: 12px;
-	width: 675px;
+	border: 1px solid #2c393c;
+	
     background: url(../images/content/touming.png);
-    border: 1px solid #2c393c;
 }
 .news-nav {
 	width: 655px;
@@ -396,12 +413,14 @@
 	float: left;
     width: 130px;
     height: 42px;
-    font: normal 16px/42px "微软雅黑", Arial, Helvetica, sans-serif;
-    color: #e8e8e8;
-    background: url(../images/content/nav_news.png) center top repeat-x;
-    text-align: center;
     border-right: 1px solid #0f0f0f;
     border-bottom: 1px solid #0f0f0f;
+
+    font: normal 16px/42px "微软雅黑", Arial, Helvetica, sans-serif;
+    color: #e8e8e8;
+    text-align: center;
+
+    background: url(../images/content/nav_news.png) center top repeat-x;
     cursor: pointer;
 }
 .news-cont {
@@ -409,11 +428,13 @@
 	width: 656px;
     height: 842px;
     margin: 13px auto 0;
+
     overflow: hidden;
 }
 .news-cont-zonghe {
 	width: 656px;
 	height: 60px;
+
 	background:url(../images/content/im_bg.png) 0 0 no-repeat;
 	overflow: hidden;
 	text-align: center;
@@ -423,9 +444,10 @@
     color: #ff4503;
 }
 .news-cont dl dt {
-	float:left;
 	width: 212px;
 	height: 141px;
+
+	float:left;	
 	text-align: center;
 	overflow: hidden;
 }
@@ -472,20 +494,28 @@
     color: #bebebe;
 }
 .news-cont:first-of-type dl{
+	width: 656px;
 	height: 148px;
     padding-top: 6px;
-    width: 656px;
     margin:0 auto;
     border-bottom: 1px solid #49575e;
 } 
 .news-cont:not(:first-of-type) dl{
     width: 656px;
-    margin:0 auto;
-    border-bottom: 1px solid #49575e;
     height: 153px;
+    margin:0 auto;
+    border-bottom: 1px solid #49575e;   
 	padding-top: 13px;
 }
+.news-more {
+	display: block;
+	width: 656px;
+	height: 44px;
+	margin: 0 auto;
+	text-indent: -9999px;
 
+	background: url(../images/content/news_more.png);
+}
 /*右侧*/
 .right {
 	float: right;
@@ -511,41 +541,47 @@
 	display: block;
 	margin-top: 1px;
 }
+
 /*历史专题*/
 .r-history {
-	background:url(../images/content/t_lishi.png) 0 0 no-repeat;
-	width: 398px;
+	width: 406px;
     height: 65px;
+
+	background:url(../images/content/t_lishi.png) 0 0 no-repeat;
     text-align: right;
     overflow: hidden;
 }
 .r-history-content {
+	position: relative;
 	width: 404px;
 	height: 186px;
-	background: url(../images/content/touming.png);
-    border: 1px solid #2c393c;
+	border: 1px solid #2c393c;
     padding-top: 12px;
-    position: relative;
+
+	background: url(../images/content/touming.png);    
 }
 .r-history-frame {
+	position: relative;
 	width: 380px;
 	height: 170px;
-	position: relative;
-	overflow: hidden;
 	margin: 0 auto 0;
+	
+	overflow: hidden;	
 }
 .r-history-frame ul {
+	position: absolute;
 	width: 2500px;
 	height: 170px;
-	position: absolute;
+	
 	left: -365px;
 }
 .r-history-frame ul li {
+	float: left;
 	width: 206px;
 	height: 170px;
-	text-align: center;
-	float: left;
 	margin: 10px 8px 0;
+
+	text-align: center;
 }
 .r-history-frame ul li p {
 	padding-top: 10px;
@@ -557,14 +593,128 @@
 }
 .r-history-l, .r-history-r {
 	position: absolute;
-	top: 22px;
-	cursor: pointer;
 	width: 72px;
 	height: 132px;
+	top: 22px;
+	cursor: pointer;
 }
 .r-history-l {
 	left: 12px;
 }
 .r-history-r {
 	right: 12px;
+}
+
+/*游戏指引*/
+.guide {
+	width: 406px;
+    height: 67px;
+
+	background:url(../images/content/t_zhiyin.png) 0 0 no-repeat;
+    text-align: right;
+    overflow: hidden;
+}
+.guide-cont {
+	width: 406px;
+	height: 99px;
+}
+.guide-cont a {
+	float: left;
+	width: 203px;
+	height: 99px;
+
+	text-indent: -9999px;
+	background: url(../images/content/img-zhiyin.jpg) no-repeat;
+}
+.guide-cont a:first-child {
+	background-position: 0 -99px;
+}
+.guide-cont a:last-child {
+	background-position: -203px -99px;
+}
+.guide-cont a:first-child:hover {
+	background-position: 0 0;
+}
+.guide-cont a:last-child:hover {
+	background-position: -203px 0px;
+}
+
+/*客服专区*/
+.kefu-area {
+	width: 406px;
+    height: 71px;
+
+	background:url(../images/content/t_kefu.png) 0 0 no-repeat;
+    text-align: right;
+    overflow: hidden;
+}
+.kefu-box {
+	width: 404px;
+	height: 528px;
+	border: 1px #2c393c solid;
+
+	background: url(../images/content/touming.png) repeat;
+}
+.kefu-box h3 {
+	padding: 20px 0 0 16px;
+    font: normal 16px "微软雅黑";
+    color: #eeeeee;
+}
+.kefu-box ul {
+	width: 383px;
+	height: 448px;
+	margin: 10px auto 0;
+}
+.kefu-box ul li, .kefu-box ul li a {
+	width: 383px;
+	height: 32px;
+}
+.kefu-box ul li a {
+	display: block;
+	font: normal 12px/32px "微软雅黑";
+    color: #b7b9b9;
+    background: url(../images/content/q_li.png);
+    text-indent: 20px;
+}
+.kefu-box ul li a:hover {
+	background-position: 0 -32px;
+	color: #e8581e;
+}
+
+/*footer*/
+.footer {
+	padding: 20px 0;
+    background: #000;
+}
+.footer-box {
+	height: 93px;
+
+	color: #878686;
+	font-size: 12px;
+}
+.footer-box p.footer-top {
+	width: 1002px;
+	height: 30px;
+	margin: 0 auto;
+
+	text-align: center;  
+	font-family: Verdana, Geneva, sans-serif;
+}
+.footer-bottom {
+	margin: 12px auto;
+	width: 777px;
+}
+.footer-bottom a {
+	float: left;
+	padding-right: 20px;
+	padding-top: 2px;
+}
+.footer-bottom p {
+	float: right;
+	width: 573px;
+	height: 44px;
+	padding-left: 3px;
+
+	font-family: Arial, sans-serif;
+	line-height: 16px;
 }

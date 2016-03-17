@@ -75,13 +75,13 @@
 		        <div class="banner banner4"><img src="src/images/banner/2015.jpg"><a href="#"></a></div>
 		        <div class="banner banner5"><img src="src/images/banner/zidingyi1.jpg"><a href="#"></a></div>
 		    </div>
-		    <div id="banner-button">
-			    	<a class="banner-button"></a>
-			        <a class="banner-button"></a>
-			        <a class="banner-button"></a>
-			        <a class="banner-button"></a>
-			        <a class="banner-button"></a>
-		    </div>
+		    <ul id="banner-button">
+			    	<li class="banner-button active"></li>
+			        <li class="banner-button"></li>
+			        <li class="banner-button"></li>
+			        <li class="banner-button"></li>
+			        <li class="banner-button"></li>
+		    </ul>
 	    </div>
 	    <img class="transition" src="src/images/transition/guodu.png">
 	    <div class="r-wid">
@@ -91,7 +91,7 @@
 	        </div>
 	        <div class="Rwid r-wid-top">
 	        	<a class="Rwid-kefu" href="">
-	        		<i class="Rwid-pto"></i>
+	        		<i class="Rwid-pto" id="Rwid-pto1"></i>
 	        		<span>在线客服</span>
 	        	</a>
 	        	<p>投诉邮箱</p>
@@ -99,7 +99,7 @@
 	        </div>
 	        <div class="Rwid r-wid-mid">
 	            <a class="Rwid-kefu" href="">
-	            	<i class="Rwid-pto"></i><span>新浪微博</span>
+	            	<i class="Rwid-pto" id="Rwid-pto2"></i><span>新浪微博</span>
 	            </a>
 	        	<div>
 	                <p>DOTA2官方微信</p>
@@ -112,13 +112,13 @@
 	 	<div class="content">
 	  	<!--left-->
 	    	<div class="left clearfix">
-	      		<div class="l-btn" id="l-btn-a">
+	      		<div class="l-btn">
 	        		<a class="l-btn-a1" href=""></a>
 	        		<a class="l-btn-a2" href=""></a>
 	        		<a class="l-btn-a3" href=""></a>
 	      		</div>
 	      		<div class="l-act"><a href="">查看更多 >></a></div>
-	      		<div class="l-cont l-act-cont" id="l-act-cont">
+	      		<div class="l-cont l-act-cont">
 		        	<ul>
 					  	<li>
 					      	<a href=""><img src="src/images/content/0cc1acbc357fbf1d6532b43c3df7d1a61453897795.jpg"></a>
@@ -173,8 +173,8 @@
 				  	</ul>
 	      		</div>
 	      		<div class="l-news"></div>
-	      		<div class="l-news-cont"  id="l-news">
-	          		<ul class="news-nav" id="news-nav">
+	      		<div class="l-news-cont">
+	          		<ul class="news-nav">
 	              		<li>综合</li>
 	              		<li>官方新闻</li>
 	              		<li>赛事新闻</li>
@@ -182,7 +182,7 @@
 	              		<li>游戏攻略</li>
 	          		</ul>
 	    			<!--综合-->
-	          		<div class="news-cont" id="news-cont">
+	          		<div class="news-cont">
 		              	<div class="news-cont-zonghe">
 		                  	<a href="">上海特级锦标赛 决赛日音乐会曲目公布</a>
 		              	</div>
@@ -427,6 +427,7 @@
 			                </dd>
 			            </dl>
 	          		</div>
+	          		<a class="news-more" href="">更多</a>
 	      		</div>
 	    	</div>
 	    <!--right-->
@@ -485,8 +486,43 @@
 	       			<img class="r-history-l" id="r-history-l" src="src/images/content/l2.png">
 	       			<img class="r-history-r" id="r-history-r" src="src/images/content/r2.png">
 	       		</div>
+	       		<div class="guide"></div>
+	       		<div class="guide-cont">
+	       			<a href="#">三步畅玩DOTA2</a>
+	       			<a href="#">三分钟了解DOTA2</a>
+	       		</div>
+	       		<div class="kefu-area"></div>
+	       		<div class="kefu-box">
+	       			<h3>常见问题</h3>
+	       			<ul>
+	       				<li><a href="#">为什么我需要注册两个账号？</a></li>
+	       				<li><a href="#">如何注册DOTA2账号？</a></li>
+	       				<li><a href="#">如何绑定完美通行证(完美电竞账号)？</a></li>
+	       				<li><a href="#">运行游戏后显示“正在连接到DOTA2网络”，怎么办？</a></li>
+	       				<li><a href="#">进入客户端后【运行DOTA2】按钮无法点击，怎么办？</a></li>
+	       				<li><a href="#">更新时下载速度很慢或者卡住不动，怎么办？</a></li>
+	       				<li><a href="#">我该如何修改游戏昵称和头像？</a></li>
+	       				<li><a href="#">我该如何添加好友？</a></li>
+	       				<li><a href="#">在XP系统下切换容易使游戏导致崩溃，怎么办？</a></li>
+	       				<li><a href="#">如何查看自己的数字ID？</a></li>
+	       				<li><a href="#">我不记得DOTA2账号绑定的完美通行证了怎么办？</a></li>
+	       				<li><a href="#">游戏内商城的页面打不开？出现错误提示怎么办？</a></li>
+	       				<li><a href="#">我要充值，入口在哪里？</a></li>
+	       				<li><a href="#">进入DOTA2充值中心后，如何回到DOTA2商城页面呢？</a></li>
+	       			</ul>	
+	       		</div>
 	    	</div>
 	    </div>
+    </div>
+    <div class="footer">
+    	<div class="footer-box">
+    		<p class="footer-top">京ICP证：050016号《网络文化经营许可证》编号：京网文[2011]0782-287号 《网络视听许可证》编号：0110587 京公网安备110105019888号<br/>文网进字[2013] 028号 新出审字[2013] 1505号 ISBN：978-7-89989-826-0</p>
+    		<div class="footer-bottom clearfix">
+    			<a href="#"><img src="src/images/footer/wmlogo.gif"></a>
+    			<a href="#"><img src="src/images/footer/valve.jpg"></a>
+    			<p>完美世界（北京）网络技术有限公司 版权所有 Copyright © 2014 Perfect World Co., Ltd. All Rights reserved<br/>© 2014 Valve Corporation. All Rights reserved. Licensed to Perfect World Co., Ltd. in China</p>
+    		</div>
+    	</div>
     </div>
   	<script type="text/javascript" src="src/js/hao.js"></script>
   	<script type="text/javascript" src="src/js/home.js"></script>
