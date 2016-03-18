@@ -262,12 +262,14 @@ var index = (function(){
 		history        : history
 	}
 })();
-index.bannerMovement();
-index.rightWindow();
-index.content();
-index.contAct();
-index.newsCenter();
-index.history();
+window.onload = function(){
+	index.bannerMovement();
+	index.rightWindow();
+	index.content();
+	index.contAct();
+	index.newsCenter();
+	index.history();
+};
 
 
 
