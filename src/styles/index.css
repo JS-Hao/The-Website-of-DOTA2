@@ -1,5 +1,8 @@
 @charset "utf-8";
 /*main*/
+img {
+	border: none;
+}
 .main{
 	position: relative;
 	width: 100%;
@@ -300,11 +303,29 @@
 	background:url(about:blank);
 	overflow: hidden;
 }
-.l-btn .l-btn-a1,.l-btn .l-btn-a3 {
+.l-btn-a1 {
 	width: 226px;
+	background: url(../images/content/l_btn.jpg) no-repeat 0 0;
+	overflow: hidden;
 }
-.l-btn .l-btn-a2 {
+.l-btn-a1:hover {
+	background: url(../images/content/l_btn.jpg) no-repeat 0 -90px;
+}
+.l-btn-a2 {
 	width: 225px;
+	background: url(../images/content/l_btn.jpg) no-repeat -226px 0;
+	overflow: hidden;
+}
+.l-btn-a2:hover {
+	background: url(../images/content/l_btn.jpg) no-repeat -226px -90px;
+}
+.l-btn-a3 {
+	width: 226px;
+	background: url(../images/content/l_btn.jpg) no-repeat -451px 0;
+	overflow: hidden;
+}
+.l-btn-a3:hover {
+	background: url(../images/content/l_btn.jpg) no-repeat -451px -90px;
 }
 .l-act {
 	width: 667px;
@@ -493,18 +514,24 @@
 	font: normal 14px/30px "宋体", Arial, Helvetica, sans-serif;
     color: #bebebe;
 }
-.news-cont:first-of-type dl{
+
+.news-cont dl {
 	width: 656px;
+	margin:0 auto;
+    border-bottom: 1px solid #49575e;
+    height: 153px\0;               /*for IE8*/
+	padding-top: 13px\0;           /*for IE8*/
+}
+.news-cont-forIE8 dl {
+	height: 148px\0;               /*for IE8*/
+    padding-top: 6px\0;            /*for IE8*/
+}
+.news-cont:first-of-type dl{
 	height: 148px;
     padding-top: 6px;
-    margin:0 auto;
-    border-bottom: 1px solid #49575e;
 } 
 .news-cont:not(:first-of-type) dl{
-    width: 656px;
     height: 153px;
-    margin:0 auto;
-    border-bottom: 1px solid #49575e;   
 	padding-top: 13px;
 }
 .news-more {

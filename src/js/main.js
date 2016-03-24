@@ -1,4 +1,4 @@
-var index = (function(){
+var index = function(){
 	//banner
 	function bannerMovement(){
 		var bannerFrame = document.querySelector(".banner-frame");
@@ -112,24 +112,6 @@ var index = (function(){
 				rp.style.backgroundPosition = getCSS(rp,"backgroundPosition").split(" ")[0] + " -8px";
 			}
 		}	
-	}
-
-	//content
-	function content(){
-		var btn = document.querySelector(".l-btn");
-		var url = getCSS(btn,"background");
-		var btns = btn.getElementsByTagName("a");
-
-		for(var i = 0, len = btns.length; i < len; i++){
-			btns[i].index = i;
-			btns[i].onmouseover=function(){
-				this.style.background = url;
-				this.style.backgroundPosition = -this.index * 226 + "px" + " -90px";
-			}
-			btns[i].onmouseout=function(){
-				this.style.backgroundPosition = -this.index * 226 + "px" + " 0";
-			}
-		}
 	}
 
 	//活动中心
@@ -256,16 +238,14 @@ var index = (function(){
 	return {
 		bannerMovement : bannerMovement,
 		rightWindow    : rightWindow,
-		content        : content,
 		contAct        : contAct,
 		newsCenter     : newsCenter,
 		history        : history
 	}
-})();
+}();
 window.onload = function(){
 	index.bannerMovement();
 	index.rightWindow();
-	index.content();
 	index.contAct();
 	index.newsCenter();
 	index.history();
